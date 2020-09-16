@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00682d</color>
+    <color name="colorPrimaryDark">#00923f</color>
+    <color name="colorAccent">#00923f</color>
+    <color name="trasparent">#D8FFFFFF</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="Bg_gradient_Dark">#C40A9A48</color>
+    <color name="Bg_gradient_Accent">#01672D</color>
+
+</resources>

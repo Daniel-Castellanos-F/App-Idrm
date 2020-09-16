@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/background"
+tools:context=".ui.TrainingSchoolsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- Cabecera -->
+        <LinearLayout
+            android:layout_height="80dp"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:background="@drawable/radius_button_dark_idrm"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:layout_gravity="center"
+                android:text="@string/label_TrainingSchool"
+                android:textColor="@color/white"
+                android:textSize="35sp" />
+            <Button
+                android:id="@+id/tvGoToMenu"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:padding="1dp"
+                android:layout_gravity="right"
+                android:textAllCaps="false"
+                android:background="@drawable/radius_button_dark"
+                android:drawableTop="@drawable/ic_list_menu"
+                android:text="@string/btn_menu"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+        <!-- Cabecera -->
+
+        <!-- Cuerpo -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.2"
+            android:background="@color/trasparent"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="8dp" >
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Btn_log_out"
+                    style="@style/NewButton"
+                    android:textAppearance="@style/Widget.AppCompat.RatingBar.Small"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Btn_log_out"
+                    style="@style/NewButton"
+                    android:textAppearance="@style/Widget.AppCompat.RatingBar.Small"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Btn_log_out"
+                    style="@style/NewButton"
+                    android:textAppearance="@style/Widget.AppCompat.RatingBar.Small"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Btn_log_out"
+                    style="@style/NewButton"
+                    android:textAppearance="@style/Widget.AppCompat.RatingBar.Small"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Btn_log_out"
+                    style="@style/NewButton"
+                    android:textAppearance="@style/Widget.AppCompat.RatingBar.Small"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Btn_log_out"
+                    style="@style/NewButton"
+                    android:textAppearance="@style/Widget.AppCompat.RatingBar.Small"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Btn_log_out"
+                    style="@style/NewButton"
+                    android:textAppearance="@style/Widget.AppCompat.RatingBar.Small"/>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Fin Cuerpo -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/Btn_instagran"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="1dp"
+                    android:padding="1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textAllCaps="false"
+                    android:background="@drawable/radius_button_dark"
+                    android:drawableTop="@drawable/instagram" />
+
+                <Button
+                    android:id="@+id/Btn_face"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textAllCaps="false"
+                    android:background="@drawable/radius_button_dark"
+                    android:drawableTop="@drawable/face" />
+
+                <Button
+                    android:id="@+id/Btn_twitter"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/radius_button_dark"
+                    android:drawableTop="@drawable/twitter"
+                    android:padding="1dp"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- Fin Redes -->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

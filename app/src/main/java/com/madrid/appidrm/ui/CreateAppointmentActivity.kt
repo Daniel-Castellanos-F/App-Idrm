@@ -1,4 +1,4 @@
-package com.example.appidrm.ui
+package com.madrid.appidrm.ui
 
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -12,14 +12,14 @@ import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.example.appidrm.R
-import com.example.appidrm.io.ApiService
-import com.example.appidrm.io.response.SimpleResponse
-import com.example.appidrm.model.Escenario
-import com.example.appidrm.model.Schedule
-import com.example.appidrm.util.PreferenceHelper
-import com.example.appidrm.util.PreferenceHelper.get
-import com.example.appidrm.util.toast
+import com.madrid.appidrm.R
+import com.madrid.appidrm.io.ApiService
+import com.madrid.appidrm.io.response.SimpleResponse
+import com.madrid.appidrm.model.Escenario
+import com.madrid.appidrm.model.Schedule
+import com.madrid.appidrm.util.PreferenceHelper
+import com.madrid.appidrm.util.PreferenceHelper.get
+import com.madrid.appidrm.util.toast
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_create_appointment.*
 import kotlinx.android.synthetic.main.activity_welcome.tvGoToMenu

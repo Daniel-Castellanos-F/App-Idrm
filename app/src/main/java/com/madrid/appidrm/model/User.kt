@@ -1,4 +1,4 @@
-package com.example.appidrm.model
+package com.madrid.appidrm.model
 /*
         "id": 3,
         "name": "Paola Silva",

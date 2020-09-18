@@ -1,15 +1,15 @@
-package com.example.appidrm.ui
+package com.madrid.appidrm.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.appidrm.R
-import com.example.appidrm.io.ApiService
-import com.example.appidrm.model.Appointment
-import com.example.appidrm.util.PreferenceHelper
-import com.example.appidrm.util.PreferenceHelper.get
-import com.example.appidrm.util.toast
+import com.madrid.appidrm.R
+import com.madrid.appidrm.io.ApiService
+import com.madrid.appidrm.model.Appointment
+import com.madrid.appidrm.util.PreferenceHelper
+import com.madrid.appidrm.util.PreferenceHelper.get
+import com.madrid.appidrm.util.toast
 import kotlinx.android.synthetic.main.activity_my_appointment.*
 import kotlinx.android.synthetic.main.activity_welcome.tvGoToMenu
 import retrofit2.Call

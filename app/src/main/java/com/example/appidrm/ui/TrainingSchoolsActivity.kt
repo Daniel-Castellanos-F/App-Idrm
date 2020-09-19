@@ -1,9 +1,9 @@
-package com.madrid.appidrm.ui
+package com.example.appidrm.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.madrid.appidrm.R
+import com.example.appidrm.R
 import kotlinx.android.synthetic.main.activity_welcome.*
 
 class TrainingSchoolsActivity : AppCompatActivity() {

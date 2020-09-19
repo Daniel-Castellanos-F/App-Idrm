@@ -1,11 +1,11 @@
-package com.madrid.appidrm.ui
+package com.example.appidrm.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.madrid.appidrm.R
-import com.madrid.appidrm.model.Appointment
+import com.example.appidrm.R
+import com.example.appidrm.model.Appointment
 import kotlinx.android.synthetic.main.item_appointment.view.*
 
 class AppointmentAdapter

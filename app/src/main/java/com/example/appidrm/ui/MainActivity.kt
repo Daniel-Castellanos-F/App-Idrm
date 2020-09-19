@@ -1,17 +1,17 @@
-package com.madrid.appidrm.ui
+package com.example.appidrm.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.madrid.appidrm.util.PreferenceHelper
+import com.example.appidrm.util.PreferenceHelper
 import kotlinx.android.synthetic.main.activity_main.*
-import com.madrid.appidrm.util.PreferenceHelper.get
-import com.madrid.appidrm.util.PreferenceHelper.set
-import com.madrid.appidrm.R
-import com.madrid.appidrm.io.ApiService
-import com.madrid.appidrm.io.response.LoginResponse
-import com.madrid.appidrm.util.toast
+import com.example.appidrm.util.PreferenceHelper.get
+import com.example.appidrm.util.PreferenceHelper.set
+import com.example.appidrm.R
+import com.example.appidrm.io.ApiService
+import com.example.appidrm.io.response.LoginResponse
+import com.example.appidrm.util.toast
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback

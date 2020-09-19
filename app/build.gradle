@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.madrid.appidrm"
+        applicationId "com.example.appidrm"
         minSdkVersion 17
         targetSdkVersion 30
         versionCode 1

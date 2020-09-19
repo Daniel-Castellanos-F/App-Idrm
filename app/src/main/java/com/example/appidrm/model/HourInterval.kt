@@ -1,4 +1,4 @@
-package com.madrid.appidrm.model
+package com.example.appidrm.model
 
 data class HourInterval(val start: String, val end: String){
     override fun toString(): String {

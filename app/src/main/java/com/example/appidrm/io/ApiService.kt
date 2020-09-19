@@ -1,10 +1,10 @@
-package com.madrid.appidrm.io
+package com.example.appidrm.io
 
-import com.madrid.appidrm.io.response.LoginResponse
-import com.madrid.appidrm.io.response.SimpleResponse
-import com.madrid.appidrm.model.Appointment
-import com.madrid.appidrm.model.Escenario
-import com.madrid.appidrm.model.Schedule
+import com.example.appidrm.io.response.LoginResponse
+import com.example.appidrm.io.response.SimpleResponse
+import com.example.appidrm.model.Appointment
+import com.example.appidrm.model.Escenario
+import com.example.appidrm.model.Schedule
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call

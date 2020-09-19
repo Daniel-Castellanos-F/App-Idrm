@@ -1,4 +1,4 @@
-package com.madrid.appidrm.util
+package com.example.appidrm.util
 
 import android.content.Context
 import android.widget.Toast

@@ -1,18 +1,18 @@
 package com.example.appidrm.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.appidrm.util.PreferenceHelper
-import kotlinx.android.synthetic.main.activity_main.*
-import com.example.appidrm.util.PreferenceHelper.get
-import com.example.appidrm.util.PreferenceHelper.set
+import androidx.appcompat.app.AppCompatActivity
 import com.example.appidrm.R
 import com.example.appidrm.io.ApiService
 import com.example.appidrm.io.response.LoginResponse
+import com.example.appidrm.util.PreferenceHelper
+import com.example.appidrm.util.PreferenceHelper.get
+import com.example.appidrm.util.PreferenceHelper.set
 import com.example.appidrm.util.toast
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         //share preferences
 
@@ -71,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     if (loginResponse.success){
                         createSessionPreference(loginResponse.jwt)
-                        goToWelcomeActivity()
+                        goToWelcomeActivity(true)
                     } else {
                         toast(getString(R.string.error_invalid_credentials))
                     }
@@ -88,8 +90,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun goToWelcomeActivity(){
+    private fun goToWelcomeActivity(isUserInput: Boolean = false){
         val intent = Intent(this, WelcomeActivity::class.java)
+
+        if(isUserInput){
+                intent.putExtra("store_token",true)
+        }
+
         startActivity(intent)
         finish()
     }

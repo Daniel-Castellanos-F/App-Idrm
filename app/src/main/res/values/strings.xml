@@ -65,5 +65,6 @@
     <string name="error_register_empty_fields">Por favor completar los datos</string>
     <string name="error_register_password_do_not_match">Las contraseñas no coinciden</string>
     <string name="error_register_validation">Ocurrio un error en el registro</string>
+    <string name="default_notification_channel_id">default_channel</string>
 
 </resources>

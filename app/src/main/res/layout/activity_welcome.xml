@@ -8,125 +8,116 @@
     android:background="@drawable/background"
     tools:context=".ui.WelcomeActivity">
 
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="18dp">
-
     <!-- Cabecera -->
-    <LinearLayout
-        android:layout_height="80dp"
-        android:layout_width="match_parent">
 
-        <ImageView
-            android:background="@drawable/radius_button_dark_idrm"
-            android:layout_width="80dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:src="@drawable/logo" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radius_button_dark_idrm"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tvGoToMenu"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/radius_button_dark"
+        android:drawableTop="@drawable/ic_list_menu"
+        android:padding="1dp"
+        android:text="@string/btn_menu"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Fin Cabecera -->
+
+    <!-- Cuerpo -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingTop="1dp"
+        android:paddingRight="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/Btn_face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGoToMenu">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_margin="3dp"
-            android:layout_gravity="center"
             android:text="@string/label_Bienvenidos"
             android:textColor="@color/white"
-            android:textSize="35sp" />
-        <Button
-            android:id="@+id/tvGoToMenu"
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp"
-            android:padding="1dp"
-            android:layout_gravity="right"
-            android:textAllCaps="false"
-            android:background="@drawable/radius_button_dark"
-            android:drawableTop="@drawable/ic_list_menu"
-            android:text="@string/btn_menu"
-            android:textColor="@color/white"
-            android:textSize="18dp" />
-    </LinearLayout>
-    <!-- Fin Cabecera -->
-
-    <!-- Cuerpo -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3.2"
-        android:orientation="vertical"
-        android:paddingTop="1dp"
-        android:paddingLeft="18dp"
-        android:paddingRight="18dp">
+            android:textSize="20sp" />
 
     </LinearLayout>
+
     <!-- Fin Cuerpo -->
 
     <!-- Redes-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:paddingTop="10dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+    <Button
+        android:id="@+id/Btn_instagran"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
 
-            <Button
-                android:id="@+id/Btn_instagran"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="1dp"
-                android:padding="1dp"
-                android:layout_gravity="center_horizontal"
-                android:textAllCaps="false"
-                android:background="@drawable/radius_button_dark"
-                android:drawableTop="@drawable/instagram" />
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radius_button_dark"
+        android:drawableTop="@drawable/instagram"
+        android:padding="1dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Btn_face" />
 
-            <Button
-                android:id="@+id/Btn_face"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:padding="1dp"
-                android:layout_gravity="center_horizontal"
-                android:textAllCaps="false"
-                android:background="@drawable/radius_button_dark"
-                android:drawableTop="@drawable/face" />
+    <Button
+        android:id="@+id/Btn_face"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radius_button_dark"
+        android:drawableTop="@drawable/face"
+        android:padding="1dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        </LinearLayout>
+    <Button
+        android:id="@+id/Btn_twitter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
 
-        <Button
-            android:id="@+id/Btn_twitter"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/radius_button_dark"
-            android:drawableTop="@drawable/twitter"
-            android:padding="1dp"
-            android:textAllCaps="false" />
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radius_button_dark"
+        android:drawableTop="@drawable/twitter"
+        android:padding="1dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Btn_face" />
 
-    </LinearLayout>
     <!-- Fin Redes -->
 
-</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

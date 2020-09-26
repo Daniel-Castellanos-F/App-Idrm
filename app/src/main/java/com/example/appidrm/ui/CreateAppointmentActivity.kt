@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.example.appidrm.EscenariosMaps
 import com.example.appidrm.R
 import com.example.appidrm.io.ApiService
 import com.example.appidrm.io.response.SimpleResponse
@@ -40,6 +41,9 @@ class CreateAppointmentActivity : AppCompatActivity() {
     private var selectedCalendar = Calendar.getInstance()
     private var selectedTimeRadioButton: RadioButton? = null
 
+    var longitud: Double = -74.26264429999999
+    var latitud:Double = 4.7343337
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_appointment)
@@ -47,7 +51,14 @@ class CreateAppointmentActivity : AppCompatActivity() {
         tvGoToMenu.setOnClickListener{
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
+            finish()
+        }
 
+        ViewEscenario.setOnClickListener{
+            val intent = Intent(this, EscenariosMaps::class.java)
+            intent.putExtra("longitud",longitud)
+            intent.putExtra("latitud",latitud)
+            startActivity(intent)
         }
 
         btnNetx1.setOnClickListener{
@@ -110,11 +121,9 @@ class CreateAppointmentActivity : AppCompatActivity() {
                 Toast.makeText(this@CreateAppointmentActivity, getString(R.string.error_loading_escenarios), Toast.LENGTH_SHORT).show()
                 finish()
             }
-
             override fun onResponse(call: Call<ArrayList<Escenario>>, response: Response<ArrayList<Escenario>>) {
                 if (response.isSuccessful){
                     val escenarios = response.body()
-
                     spinnerEscenarios.adapter = ArrayAdapter<Escenario>(this@CreateAppointmentActivity,android.R.layout.simple_list_item_1, escenarios!!)
                 }
             }
@@ -127,9 +136,10 @@ class CreateAppointmentActivity : AppCompatActivity() {
         spinnerEscenarios.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(p0: AdapterView<*>){
             }
-
             override fun onItemSelected(adapter: AdapterView<*>?, view:View?, position: Int, id: Long){
                 val escenario = adapter?.getItemAtPosition(position) as Escenario
+                longitud = escenario.longitud
+                latitud = escenario.latitud
                 loadHours(escenario.id, etScheduleDate.text.toString())
             }
         }
@@ -180,13 +190,14 @@ class CreateAppointmentActivity : AppCompatActivity() {
         })
         //Toast.makeText(this,"escenario: $escenarioId, date: $date",Toast.LENGTH_SHORT).show()
     }
+
     private fun showAppointmentDataToConfirm(){
-        //val escenario = spinnerEscenarios.selectedItem as Escenario
+        val escenario = spinnerEscenarios.selectedItem as Escenario
         tvConfirmEscenario.text = spinnerEscenarios.selectedItem.toString()
         tvConfirmMotivo.text = etMotivo.text.toString()
         tvConfirmScheduleDate.text = etScheduleDate.text.toString()
         tvConfirmScheduleTime.text = selectedTimeRadioButton?.text.toString()
-        //tvConfirmAddres.text = escenario.address
+        tvConfirmAddres.text = escenario.address
     }
 
     fun onClickScheduleDate(v: View?){

@@ -14,7 +14,13 @@ class TrainingSchoolsActivity : AppCompatActivity() {
         tvGoToMenu.setOnClickListener{
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
-
+            finish()
         }
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, WelcomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

@@ -66,5 +66,8 @@
     <string name="error_register_password_do_not_match">Las contraseñas no coinciden</string>
     <string name="error_register_validation">Ocurrio un error en el registro</string>
     <string name="default_notification_channel_id">default_channel</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_my_escenarios">Map</string>
+    <string name="title_activity_escenarios_maps">Map</string>
 
 </resources>

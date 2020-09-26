@@ -3,12 +3,15 @@ package com.example.appidrm.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AlertDialog
 import com.example.appidrm.*
 import com.example.appidrm.io.ApiService
 import com.example.appidrm.util.PreferenceHelper
 import com.example.appidrm.util.PreferenceHelper.set
 import com.example.appidrm.util.PreferenceHelper.get
 import com.example.appidrm.util.toast
+import kotlinx.android.synthetic.main.activity_create_appointment.*
 import kotlinx.android.synthetic.main.activity_menu.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -77,4 +80,11 @@ class MenuActivity : AppCompatActivity() {
     private fun clearSessionPreference(){
         preferences["jwt"] = ""
     }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, WelcomeActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 }

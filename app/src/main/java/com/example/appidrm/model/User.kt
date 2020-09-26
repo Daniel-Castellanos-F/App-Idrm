@@ -14,5 +14,4 @@ data class User(
     val cedula: String,
     val address: String,
     val role: String
-
 )

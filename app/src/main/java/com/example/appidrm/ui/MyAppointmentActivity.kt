@@ -40,7 +40,7 @@ class MyAppointmentActivity : AppCompatActivity() {
         tvGoToMenu.setOnClickListener{
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
-
+            finish()
         }
     }
 
@@ -62,5 +62,11 @@ class MyAppointmentActivity : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, WelcomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

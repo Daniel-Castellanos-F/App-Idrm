@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         //share preferences
 
         val preferences = PreferenceHelper.defaultPrefs(this)

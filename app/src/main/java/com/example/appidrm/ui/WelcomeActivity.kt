@@ -33,11 +33,10 @@ class WelcomeActivity : AppCompatActivity() {
         if(storeToken)
             storeToken()
 
-
-
         tvGoToMenu.setOnClickListener{
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

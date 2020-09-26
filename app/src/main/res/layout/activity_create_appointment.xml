@@ -9,82 +9,84 @@
     android:background="@drawable/background"
     tools:context=".ui.CreateAppointmentActivity">
 
+    <!-- Cabecera -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/radius_button_dark_idrm"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tvGoToMenu"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/radius_button_dark"
+        android:drawableTop="@drawable/ic_list_menu"
+        android:padding="1dp"
+        android:text="@string/btn_menu"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Fin Cabecera -->
+
+    <!-- Cuerpo -->
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="5dp"
         android:orientation="vertical"
-        android:padding="18dp">
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/Btn_face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGoToMenu">
 
-
-        <!-- Cabecera -->
-        <LinearLayout
-            android:layout_height="80dp"
-            android:layout_width="match_parent">
-
-            <ImageView
-                android:background="@drawable/radius_button_dark_idrm"
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:src="@drawable/logo" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:layout_gravity="center"
-                android:text="@string/label_Reservas"
-                android:textColor="@color/white"
-                android:textSize="22sp" />
-            <Button
-                android:id="@+id/tvGoToMenu"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:padding="1dp"
-                android:layout_gravity="right"
-                android:textAllCaps="false"
-                android:background="@drawable/radius_button_dark"
-                android:drawableTop="@drawable/ic_list_menu"
-                android:text="@string/btn_menu"
-                android:textColor="@color/white"
-                android:textSize="18dp" />
-        </LinearLayout>
-        <!-- Cabecera -->
-
-
+        <!-- Card 1 -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cvStep1"
-            android:visibility="visible"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3.2"
-            android:background="@color/trasparent"
-            app:cardElevation="10dp"
-            app:cardCornerRadius="15dp" >
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:visibility="visible"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
 
                 <LinearLayout
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="10dp"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/label_Escenario"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="6dp"
+                        android:text="@string/label_Reservas"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+                        android:textSize="25sp" />
 
                     <Spinner
                         android:id="@+id/spinnerEscenarios"
@@ -97,12 +99,12 @@
                         android:id="@+id/ViewEscenario"
                         android:layout_width="145dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="right"
                         android:layout_marginTop="30dp"
                         android:layout_marginBottom="30dp"
-                        android:layout_gravity="right"
-                        android:textAllCaps="false"
                         android:background="@drawable/radius_button"
                         android:text="@string/St_Btn_ViewEscenario"
+                        android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="20dp" />
 
@@ -110,23 +112,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/label_motivo"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+                        android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/etMotivo"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                         />
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/label_Schedule_date"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+                        android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/etScheduleDate"
@@ -140,21 +141,21 @@
 
                     <TextView
                         android:id="@+id/tvSelectEscenarioAndDate"
-                        android:textColor="@color/colorAccent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_margin="6dp"
                         android:text="@string/label_select_esce_date"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:textColor="@color/colorAccent" />
 
                     <TextView
                         android:id="@+id/tvNotAvailableHours"
-                        android:textColor="@color/colorAccent"
-                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_margin="6dp"
                         android:text="@string/label_not_available_hours"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-                    
+                        android:textColor="@color/colorAccent"
+                        android:visibility="gone" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -163,46 +164,48 @@
                         <LinearLayout
                             android:id="@+id/radioGroupLeft"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
                             android:orientation="vertical">
 
                             <RadioButton
-                                android:visibility="gone"
-                                tools:visibility="visible"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="8:00 AM"/>
+                                android:text="8:00 AM"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
+
                             <RadioButton
-                                android:visibility="gone"
-                                tools:visibility="visible"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="10:00 AM"/>
+                                android:text="10:00 AM"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/radioGroupRight"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
                             android:orientation="vertical">
 
                             <RadioButton
-                                android:visibility="gone"
-                                tools:visibility="visible"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="9:00 AM"/>
+                                android:text="9:00 AM"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
+
                             <RadioButton
-                                android:visibility="gone"
-                                tools:visibility="visible"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="11:00 AM"/>
+                                android:text="11:00 AM"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
 
                         </LinearLayout>
 
@@ -213,251 +216,249 @@
                         android:id="@+id/btnNetx1"
                         android:layout_width="120dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="30dp"
-                        android:layout_gravity="center"
-                        android:textAllCaps="false"
                         android:background="@drawable/radius_button"
                         android:text="@string/btn_cv_Siguiente_create_appointment"
+                        android:textAllCaps="false"
                         android:textColor="@color/white"
                         android:textSize="20dp" />
 
                 </LinearLayout>
+
             </androidx.core.widget.NestedScrollView>
+
         </androidx.cardview.widget.CardView>
 
+        <!-- Fin Card 1 -->
+
+        <!-- Card 2 -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cvStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
             android:visibility="gone"
-            app:contentPadding="12dp"
             app:cardCornerRadius="15dp"
             app:cardElevation="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3.2">
+            app:contentPadding="12dp">
 
-            <LinearLayout
-                android:orientation="vertical"
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="@string/lable_confirm_appointment_title"
-                    android:textColor="@color/black"
-                    android:textSize="30dp"
-                    android:layout_margin="20dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lable_confirm_appointment_inf"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
+                    android:orientation="vertical">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/lable_confirm_appointment_escenario"
-                        android:textColor="@color/black"/>
+                        android:layout_margin="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/lable_confirm_appointment_title"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textColor="@color/black"
+                        android:textSize="30dp" />
 
                     <TextView
-                        android:id="@+id/tvConfirmEscenario"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:text="Pista de Recreacion"
-                        android:textColor="@color/black"/>
+                        android:text="@string/lable_confirm_appointment_inf"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/lable_confirm_appointment_escenario"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvConfirmEscenario"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            tools:text="Pista de Recreacion" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/lable_confirm_appointment_address"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvConfirmAddres"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            tools:text="Calle 12 A #2-32" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/lable_confirm_appointment_motivo"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvConfirmMotivo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            tools:text="Programas de formación" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/lable_confirm_appointment_scheduleDate"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvConfirmScheduleDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            tools:text="12/12/2020" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/lable_confirm_appointment_scheduleTime"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvConfirmScheduleTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            tools:text="4:00 PM" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_tvConfirmAppointment"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/radius_button"
+                        android:text="@string/Btn_Confirmar_appointment"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="20dp" />
+
                 </LinearLayout>
 
-
-               <!-- <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="@string/lable_confirm_appointment_address"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:id="@+id/tvConfirmAddres"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        tools:text="Calle 12 A #2-32"
-                        android:textColor="@color/black"/>
-                </LinearLayout> -->
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="@string/lable_confirm_appointment_motivo"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:id="@+id/tvConfirmMotivo"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        tools:text="Programas de formación"
-                        android:textColor="@color/black"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="@string/lable_confirm_appointment_scheduleDate"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:id="@+id/tvConfirmScheduleDate"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        tools:text="12/12/2020"
-                        android:textColor="@color/black"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:text="@string/lable_confirm_appointment_scheduleTime"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:id="@+id/tvConfirmScheduleTime"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        tools:text="4:00 PM"
-                        android:textColor="@color/black"/>
-                </LinearLayout>
-
-                <Button
-                    android:id="@+id/btn_tvConfirmAppointment"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_gravity="center"
-                    android:textAllCaps="false"
-                    android:background="@drawable/radius_button"
-                    android:text="@string/Btn_Confirmar_appointment"
-                    android:textColor="@color/white"
-                    android:textSize="20dp" />
-
-            </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
 
         </androidx.cardview.widget.CardView>
-
-        <!-- Redes-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/Btn_instagran"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="1dp"
-                    android:padding="1dp"
-                    android:layout_gravity="center_horizontal"
-                    android:textAllCaps="false"
-                    android:background="@drawable/radius_button_dark"
-                    android:drawableTop="@drawable/instagram" />
-
-                <Button
-                    android:id="@+id/Btn_face"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="1dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:padding="1dp"
-                    android:layout_gravity="center_horizontal"
-                    android:textAllCaps="false"
-                    android:background="@drawable/radius_button_dark"
-                    android:drawableTop="@drawable/face" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/Btn_twitter"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="1dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/radius_button_dark"
-                android:drawableTop="@drawable/twitter"
-                android:padding="1dp"
-                android:textAllCaps="false" />
-
-        </LinearLayout>
-        <!-- Fin Redes -->
-
+        <!-- Fin Card 2 -->
 
     </LinearLayout>
+
+    <!-- Fin Cuerpo -->
+
+    <!-- Redes-->
+    <Button
+        android:id="@+id/Btn_instagran"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radius_button_dark"
+        android:drawableTop="@drawable/instagram"
+        android:padding="1dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Btn_face" />
+
+    <Button
+        android:id="@+id/Btn_face"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radius_button_dark"
+        android:drawableTop="@drawable/face"
+        android:padding="1dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Btn_twitter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radius_button_dark"
+        android:drawableTop="@drawable/twitter"
+        android:padding="1dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Btn_face" />
+    <!-- Fin Redes -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
